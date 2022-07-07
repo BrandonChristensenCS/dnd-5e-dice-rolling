@@ -3,7 +3,8 @@
 #include <sstream>
 #include <random>
 #include <chrono>
-#include "rollData.h"
+#include "rollData/rollData.h"
+#include "characterInfo/characterInfo.h"
 
 #define MAX 100
 
