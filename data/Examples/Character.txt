@@ -1,0 +1,59 @@
+# This is an example of a 5e (5th edition) character build using the Cleric class.
+
+# Character Name
+Elaith Ulaqen
+
+# Class
+Cleric
+
+# Level
+6
+
+# Ability Scores
+8
+14
+15
+12
+20
+10
+
+# Saving Throw Proficiencies
+0
+0
+0
+0
+1
+1
+
+# Athletics Proficiency
+1
+
+# DEX Skill Proficiencies
+# <Initiative, Acrobatics, Sleight of Hand, Stealth>
+0
+0
+0
+0
+
+# INT Skill Proficiencies
+# <Arcana, History, Investigation, Nature, Religion>
+1
+0
+1
+0
+0
+
+# WIS Skill Proficiencies
+# <Animal Handling, Insight, Medicine, Perception, Survival>
+0
+1
+1
+2
+0
+
+# CHA Skill Proficiencies
+# <Deception, Intimidation, Performance, Persuasion>
+0
+0
+0
+0
