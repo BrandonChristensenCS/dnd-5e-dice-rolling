@@ -1,8 +1,120 @@
-#include "characterInfo.h"
+#ifndef CHARACTER_INFO_
+#define CHARACTER_INFO_
+
 #include <string>
 #include <cmath>
 
-using namespace std;
+class characterInfo {
+    public:
+        characterInfo();
+        std::string getCharacterName() const;
+        std::string getCharacterClass() const;
+        float getCharacterLevel() const;
+        short getProficiencyBonus() const;
+        short getHitDiceSize() const;
+        short getStrengthScore() const;
+        short getDexterityScore() const;
+        short getConstitutionScore() const;
+        short getIntelligenceScore() const;
+        short getWisdomScore() const;
+        short getCharismaScore() const;
+        short getStrengthModifier() const;
+        short getDexterityModifier() const;
+        short getConstitutionModifier() const;
+        short getIntelligenceModifier() const;
+        short getWisdomModifier() const;
+        short getCharismaModifier() const;
+        short getStrengthSave() const;
+        short getDexteritySave() const;
+        short getConstitutionSave() const;
+        short getIntelligenceSave() const;
+        short getWisdomSave() const;
+        short getCharismaSave() const;
+        short getAthletics() const;
+        short getInitiative() const;
+        short getAcrobatics() const;
+        short getSleightOfHand() const;
+        short getStealth() const;
+        short getArcana() const;
+        short getHistory() const;
+        short getInvestigation() const;
+        short getNature() const;
+        short getReligion() const;
+        short getAnimalHandling() const;
+        short getInsight() const;
+        short getMedicine() const;
+        short getPerception() const;
+        short getSurvival() const;
+        short getDeception() const;
+        short getIntimidation() const;
+        short getPerformance() const;
+        short getPersuasion() const;
+        short getPassivePerception() const;
+        short getPassiveInsight() const;
+        short getPassiveInvestigation() const;
+        void setCharacterInfo(std::string, std::string, float);
+        void setAbilityScores(short, short, short, short, short, short);
+        void setSavingThrows(bool, bool, bool, bool, bool, bool);
+        void setStrengthSkills(short);
+        void setDexteritySkills(short, short, short, short);
+        void setIntelligenceSkills(short, short, short, short, short);
+        void setWisdomSkills(short, short, short, short, short);
+        void setCharismaSkills(short, short, short, short);
+
+    private:
+        std::string characterName;
+        std::string characterClass;
+        float characterLevel;
+        short proficiencyBonus;
+        short hitDiceCount;
+        short hitDiceSize;
+        short strengthScore;
+        short dexterityScore;
+        short constitutionScore;
+        short intelligenceScore;
+        short wisdomScore;
+        short charismaScore;
+        short strengthModifier;
+        short dexterityModifier;
+        short constitutionModifier;
+        short intelligenceModifier;
+        short wisdomModifier;
+        short charismaModifier;
+        short strengthSaveModifier;
+        short dexteritySaveModifier;
+        short constitutionSaveModifier;
+        short intelligenceSaveModifier;
+        short wisdomSaveModifier;
+        short charismaSaveModifier;
+        bool strengthSaveProficiency;
+        bool dexteritySaveProficiency;
+        bool constitutionSaveProficiency;
+        bool intelligenceSaveProficiency;
+        bool wisdomSaveProficiency;
+        bool charismaSaveProficiency;
+        short athleticsProf;
+        short initiativeProf;
+        short acrobaticsProf;
+        short sleightOfHandProf;
+        short stealthProf;
+        short arcanaProf;
+        short historyProf;
+        short investigationProf;
+        short natureProf;
+        short religionProf;
+        short animalHandlingProf;
+        short insightProf;
+        short medicineProf;
+        short perceptionProf;
+        short survivalProf;
+        short deceptionProf;
+        short intimidationProf;
+        short performanceProf;
+        short persuasionProf;
+        short passivePerception;
+        short passiveInsight;
+        short passiveInvestigation;
+};
 
 // Constructor
 characterInfo::characterInfo() {}
@@ -14,76 +126,79 @@ characterInfo::characterInfo() {}
  **/
 
 // Character Info
-string characterInfo::getCharacterName() const {
+std::string characterInfo::getCharacterName() const {
     return characterName;
 }
-string characterInfo::getCharacterClass() const {
+std::string characterInfo::getCharacterClass() const {
     return characterClass;
 }
-int characterInfo::getCharacterLevel() const {
+float characterInfo::getCharacterLevel() const {
     return characterLevel;
 }
-int characterInfo::getProficiencyBonus() const {
+short characterInfo::getProficiencyBonus() const {
     return proficiencyBonus;
+}
+short characterInfo::getHitDiceSize() const {
+    return hitDiceSize;
 }
 
 // Raw Ability Scores
-int characterInfo::getStrengthScore() const {
+short characterInfo::getStrengthScore() const {
     return strengthScore;
 }
-int characterInfo::getDexterityScore() const {
+short characterInfo::getDexterityScore() const {
     return dexterityScore;
 }
-int characterInfo::getConstitutionScore() const {
+short characterInfo::getConstitutionScore() const {
     return constitutionScore;
 }
-int characterInfo::getIntelligenceScore() const {
+short characterInfo::getIntelligenceScore() const {
     return intelligenceScore;
 }
-int characterInfo::getWisdomScore() const {
+short characterInfo::getWisdomScore() const {
     return wisdomScore;
 }
-int characterInfo::getCharismaScore() const {
+short characterInfo::getCharismaScore() const {
     return charismaScore;
 }
 
 // Ability Score Modifiers
-int characterInfo::getStrengthModifier() const {
+short characterInfo::getStrengthModifier() const {
     return strengthModifier;
 }
-int characterInfo::getDexterityModifier() const {
+short characterInfo::getDexterityModifier() const {
     return dexterityModifier;
 }
-int characterInfo::getConstitutionModifier() const {
+short characterInfo::getConstitutionModifier() const {
     return constitutionModifier;
 }
-int characterInfo::getIntelligenceModifier() const {
+short characterInfo::getIntelligenceModifier() const {
     return intelligenceModifier;
 }
-int characterInfo::getWisdomModifier() const {
+short characterInfo::getWisdomModifier() const {
     return wisdomModifier;
 }
-int characterInfo::getCharismaModifier() const {
+short characterInfo::getCharismaModifier() const {
     return charismaModifier;
 }
 
 // Saving Throw Modifiers
-int characterInfo::getStrengthSave() const {
+short characterInfo::getStrengthSave() const {
     return strengthSaveModifier;
 }
-int characterInfo::getDexteritySave() const {
+short characterInfo::getDexteritySave() const {
     return dexteritySaveModifier;
 }
-int characterInfo::getConstitutionSave() const {
+short characterInfo::getConstitutionSave() const {
     return constitutionSaveModifier;
 }
-int characterInfo::getIntelligenceSave() const {
+short characterInfo::getIntelligenceSave() const {
     return intelligenceSaveModifier;
 }
-int characterInfo::getWisdomSave() const {
+short characterInfo::getWisdomSave() const {
     return wisdomSaveModifier;
 }
-int characterInfo::getCharismaSave() const {
+short characterInfo::getCharismaSave() const {
     return charismaSaveModifier;
 }
 
@@ -92,7 +207,7 @@ int characterInfo::getCharismaSave() const {
 **/
 
 // Strength Skill
-int characterInfo::getAthletics() const {
+short characterInfo::getAthletics() const {
     if (athleticsProf == 0)
         return strengthModifier;
     if (athleticsProf == 1)
@@ -104,7 +219,7 @@ int characterInfo::getAthletics() const {
 }
 
 // Dexterity Skills
-int characterInfo::getInitiative() const {
+short characterInfo::getInitiative() const {
     if (initiativeProf == 0)
         return dexterityModifier;
     if (initiativeProf == 1)
@@ -114,7 +229,7 @@ int characterInfo::getInitiative() const {
 
     return -1;
 }
-int characterInfo::getAcrobatics() const {
+short characterInfo::getAcrobatics() const {
     if (acrobaticsProf == 0)
         return dexterityModifier;
     if (acrobaticsProf == 1)
@@ -124,7 +239,7 @@ int characterInfo::getAcrobatics() const {
 
     return -1;
 }
-int characterInfo::getSleightOfHand() const {
+short characterInfo::getSleightOfHand() const {
     if (sleightOfHandProf == 0)
         return dexterityModifier;
     if (sleightOfHandProf == 1)
@@ -134,7 +249,7 @@ int characterInfo::getSleightOfHand() const {
 
     return -1;
 }
-int characterInfo::getStealth() const {
+short characterInfo::getStealth() const {
     if (stealthProf == 0)
         return dexterityModifier;
     if (stealthProf == 1)
@@ -146,7 +261,7 @@ int characterInfo::getStealth() const {
 }
 
 // Intelligence Skills
-int characterInfo::getArcana() const {
+short characterInfo::getArcana() const {
     if (arcanaProf == 0)
         return intelligenceModifier;
     if (arcanaProf == 1)
@@ -156,7 +271,7 @@ int characterInfo::getArcana() const {
 
     return -1;
 }
-int characterInfo::getHistory() const {
+short characterInfo::getHistory() const {
     if (historyProf == 0)
         return intelligenceModifier;
     if (historyProf == 1)
@@ -166,7 +281,7 @@ int characterInfo::getHistory() const {
 
     return -1;
 }
-int characterInfo::getInvestigation() const {
+short characterInfo::getInvestigation() const {
     if (investigationProf == 0)
         return intelligenceModifier;
     if (investigationProf == 1)
@@ -176,7 +291,7 @@ int characterInfo::getInvestigation() const {
 
     return -1;
 }
-int characterInfo::getNature() const {
+short characterInfo::getNature() const {
     if (natureProf == 0)
         return intelligenceModifier;
     if (natureProf == 1)
@@ -186,7 +301,7 @@ int characterInfo::getNature() const {
 
     return -1;
 }
-int characterInfo::getReligion() const {
+short characterInfo::getReligion() const {
     if (religionProf == 0)
         return intelligenceModifier;
     if (religionProf == 1)
@@ -198,7 +313,7 @@ int characterInfo::getReligion() const {
 }
 
 // Wisdom Skills
-int characterInfo::getAnimalHandling() const {
+short characterInfo::getAnimalHandling() const {
     if (animalHandlingProf == 0)
         return wisdomModifier;
     if (animalHandlingProf == 1)
@@ -208,7 +323,7 @@ int characterInfo::getAnimalHandling() const {
 
     return -1;
 }
-int characterInfo::getInsight() const {
+short characterInfo::getInsight() const {
     if (insightProf == 0)
         return wisdomModifier;
     if (insightProf == 1)
@@ -218,7 +333,7 @@ int characterInfo::getInsight() const {
 
     return -1;
 }
-int characterInfo::getMedicine() const {
+short characterInfo::getMedicine() const {
     if (medicineProf == 0)
         return wisdomModifier;
     if (medicineProf == 1)
@@ -228,7 +343,7 @@ int characterInfo::getMedicine() const {
 
     return -1;
 }
-int characterInfo::getPerception() const {
+short characterInfo::getPerception() const {
     if (perceptionProf == 0)
         return wisdomModifier;
     if (perceptionProf == 1)
@@ -238,7 +353,7 @@ int characterInfo::getPerception() const {
 
     return -1;
 }
-int characterInfo::getSurvival() const {
+short characterInfo::getSurvival() const {
     if (survivalProf == 0)
         return wisdomModifier;
     if (survivalProf == 1)
@@ -250,7 +365,7 @@ int characterInfo::getSurvival() const {
 }
 
 // Charisma Skills
-int characterInfo::getDeception() const {
+short characterInfo::getDeception() const {
     if (deceptionProf == 0)
         return charismaModifier;
     if (deceptionProf == 1)
@@ -260,7 +375,7 @@ int characterInfo::getDeception() const {
 
     return -1;
 }
-int characterInfo::getIntimidation() const {
+short characterInfo::getIntimidation() const {
     if (intimidationProf == 0)
         return charismaModifier;
     if (intimidationProf == 1)
@@ -270,7 +385,7 @@ int characterInfo::getIntimidation() const {
 
     return -1;
 }
-int characterInfo::getPerformance() const {
+short characterInfo::getPerformance() const {
     if (performanceProf == 0)
         return charismaModifier;
     if (performanceProf == 1)
@@ -280,7 +395,7 @@ int characterInfo::getPerformance() const {
 
     return -1;
 }
-int characterInfo::getPersuasion() const {
+short characterInfo::getPersuasion() const {
     if (persuasionProf == 0)
         return charismaModifier;
     if (persuasionProf == 1)
@@ -292,13 +407,13 @@ int characterInfo::getPersuasion() const {
 }
 
 // Passive Skills
-int characterInfo::getPassivePerception() const {
+short characterInfo::getPassivePerception() const {
     return 10 + getPerception();
 }
-int characterInfo::getPassiveInsight() const {
+short characterInfo::getPassiveInsight() const {
     return 10 + getInsight();
 }
-int characterInfo::getPassiveInvestigation() const {
+short characterInfo::getPassiveInvestigation() const {
     return 10 + getInvestigation();
 }
 
@@ -310,7 +425,7 @@ int characterInfo::getPassiveInvestigation() const {
 
 // Sets the character's name, class, level, proficiency bonus,
 // and the hit dice data which is based on their class.
-void characterInfo::setCharacterInfo(string name, string className, int level) {
+void characterInfo::setCharacterInfo(std::string name, std::string className, float level) {
     characterName = name;
     characterClass = className;
     characterLevel = level;
@@ -336,7 +451,7 @@ void characterInfo::setCharacterInfo(string name, string className, int level) {
 // Sets the characters ability scores and modifiers, and sets the initial
 // saving throw modifier, which will be modified in setSavingThrows based on
 // their saving throw proficiencies.
-void characterInfo::setAbilityScores(int STR_, int DEX_, int CON_, int INT_, int WIS_, int CHA_) {
+void characterInfo::setAbilityScores(short STR_, short DEX_, short CON_, short INT_, short WIS_, short CHA_) {
     strengthScore = STR_;
     dexterityScore = DEX_;
     constitutionScore = CON_;
@@ -386,32 +501,34 @@ void characterInfo::setSavingThrows(bool STR_, bool DEX_, bool CON_, bool INT_, 
 }
 
 // Sets skill proficiencies to be used in the getter functions.
-void characterInfo::setStrengthSkills(int athletics) {
+void characterInfo::setStrengthSkills(short athletics) {
     athleticsProf = athletics;
 }
-void characterInfo::setDexteritySkills(int initiative, int acrobatics, int sleight, int stealth) {
+void characterInfo::setDexteritySkills(short initiative, short acrobatics, short sleight, short stealth) {
     initiativeProf = initiative;
     acrobaticsProf = acrobatics;
     sleightOfHandProf = sleight;
     stealthProf = stealth;
 }
-void characterInfo::setIntelligenceSkills(int arcana, int history, int investigation, int nature, int religion) {
+void characterInfo::setIntelligenceSkills(short arcana, short history, short investigation, short nature, short religion) {
     arcanaProf = arcana;
     historyProf = history;
     investigationProf = investigation;
     natureProf = nature;
     religionProf = religion;
 }
-void characterInfo::setWisdomSkills(int animalHand, int insight, int medicine, int perception, int survival) {
+void characterInfo::setWisdomSkills(short animalHand, short insight, short medicine, short perception, short survival) {
     animalHandlingProf = animalHand;
     insightProf = insight;
     medicineProf = medicine;
     perceptionProf = perception;
     survivalProf = survival;
 }
-void characterInfo::setCharismaSkills(int deception, int intimidation, int performance, int persuasion) {
+void characterInfo::setCharismaSkills(short deception, short intimidation, short performance, short persuasion) {
     deceptionProf = deception;
     intimidationProf = intimidation;
     performanceProf = performance;
     persuasionProf = persuasion;
 }
+
+#endif
