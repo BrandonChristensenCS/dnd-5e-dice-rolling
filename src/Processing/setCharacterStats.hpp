@@ -18,7 +18,7 @@
 characterInfo setCharacterStats(characterInfo character) {
     std::string data;
 	std::ifstream input;
-    input.open("../data/Examples/Character.txt");
+    input.open("../data/Character.txt");
 
     std::string name, className;
     short a, b, c, d, e = 0;
